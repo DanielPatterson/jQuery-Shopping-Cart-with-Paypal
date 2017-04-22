@@ -13,7 +13,7 @@ An example using jQueryCartand jPalcart to create a jQuery Shopping Cart with Pa
 
 #### The jQuery:
 ```js
-$(document).ready(function () {
+$("document").ready(function () {
 
 	// Settings for PayPal and cart population of products added/removed
 	$("#thebasket").PayPalCart({ business: 'yourname@youremail.com', // this is where your email goes
