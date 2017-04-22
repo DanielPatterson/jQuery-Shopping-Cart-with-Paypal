@@ -11,7 +11,7 @@ An example using jQueryCartand jPalcart to create a jQuery Shopping Cart with Pa
 - jPayPalCart.js
 - alertify.min.js
 
-#### jQuery:
+#### The jQuery:
 ```js
 $(document).ready(function () {
 
