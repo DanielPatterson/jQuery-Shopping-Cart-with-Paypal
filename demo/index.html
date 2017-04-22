@@ -1,0 +1,447 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="">
+    
+    <title></title>
+    
+    <link href="dist/bootstrap-3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="dist/bootstrap-3.3.7/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+    
+    <link href="dist/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    
+    <link href="dist/alertify/alertify.core.css" rel="stylesheet" />
+	<link href="dist/alertify/alertify.default.css" id="toggleCSS" rel="stylesheet" />
+
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    <style>
+	h3 {
+	font-size: 18px;	
+	}
+	
+	/*
+	input {
+	display: none;
+	}
+	
+	label {
+	border: 1px solid #09f;
+	font-weight: 100;
+	text-transform: uppercase;
+	padding: 10px;
+	}
+	
+	label:hover {
+	background: #09f;
+	color: #fff;
+	}
+	*/
+	
+	.shop .nav,
+	.shop .dropup,
+	.shop .dropdown,
+	.shop .collapse {
+	position: static;
+	}
+	
+	.shop .navbar-inner,
+	.shop .container {
+	position: relative;
+	}
+	
+	.shop .dropdown-menu {
+	left: auto;
+	margin: 0 auto;
+	}
+	
+	.shop .dropdown-menu > li {
+	display: block;
+	}
+	
+	.shop .nav.pull-right .dropdown-menu {
+	right: 0;
+	}
+	
+	.shop .shop-content {
+	padding: 20px 30px;
+	*zoom: 1;
+	}
+	
+	.shop .shop-content:before,
+	.shop .shop-content:after {
+	display: table;
+	content: "";
+	line-height: 0;
+	}
+	
+	.shop .shop-content:after {
+	clear: both;
+	}
+	
+	.shop.navbar .nav > li > .dropdown-menu:after,
+	.shop.navbar .nav > li > .dropdown-menu:before {
+	display: none;
+	}
+	
+	.shop .dropdown.shop-fullwidth .dropdown-menu {
+	width: 65%;
+	left: 0;
+	right: 0;
+	}
+	
+	@media (max-width: 969px) {
+		.shop .dropdown.shop-fullwidth .dropdown-menu {
+		width: auto;
+		}
+		
+		.shop .shop-content {
+		padding-left: 0;
+		padding-right: 0;
+		}
+		
+		.shop .dropdown-menu > li > ul {
+		display: block;
+		}
+	}
+	
+	.shop-nav,
+	.shop table, .shop form,
+	.shop .thumbnails li {
+	margin-bottom: 0;
+	}
+	
+	#minicart {
+	color: #FF0;
+	font-size: 12px;	
+	margin-left: 20px;
+	padding: 8px 0 0 0;
+	line-height: 34px !important;
+	margin-bottom: 15px !important;
+	}
+	
+	.panel-body .fa-check {
+	color: #090;
+	}
+	
+	.panel-body #minicart {
+	font-size: 26px;
+	color: #000;
+	line-height: 22px;
+	margin: 0;
+	padding: 16px 0 0 0;		
+	}
+	
+	input[type=checkbox] {
+	display: none;
+	}
+	
+	input[type=checkbox] + label {
+	background: #900;
+	background-image: none;
+	border: 1px solid transparent;
+	border-radius: 0px;
+	cursor: pointer;
+	display: inline-block;
+	font-size: 12px;
+	font-weight: normal;
+	1height: 26px;
+	line-height: 1.428571429;
+	margin-bottom: 0;
+	padding: 10px;
+	text-align: center;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	 -o-user-select: none;
+		user-select: none;
+		
+	vertical-align: middle;
+	width: 140px;
+	white-space: nowrap;
+	}
+	
+	input[type=checkbox] + label {
+	background-color: #efefef;
+	border-color: #efefef;
+	color: #333;
+	}
+	
+	input[type=checkbox] + label:hover,
+	input[type=checkbox] + label:focus,
+	input[type=checkbox] + label:active,
+	input[type=checkbox] + label.active {
+	background-color: #09c;
+	border-color: #09c;
+	color: #fff;
+	}
+	
+	input[type=checkbox] + label:active,
+	input[type=checkbox] + labelactive {
+	background-image: none;
+	}
+	
+	input[type=checkbox] + label.disabled,
+	input[type=checkbox] + label [disabled],
+	input[type=checkbox] + label.disabled:hover,
+	input[type=checkbox] + label[disabled]:hover,
+	input[type=checkbox] + label.disabled:focus,
+	input[type=checkbox] + label[disabled]:focus,
+	input[type=checkbox] + label.disabled:active,
+	input[type=checkbox] + label[disabled]:active,
+	input[type=checkbox] + label.disabled.active,
+	input[type=checkbox] + label[disabled].active {
+	background-color: #d9534f;
+	border-color: #d43f3a;
+	}
+	
+	input[type=checkbox] + label .badge {
+	background-color: #fff;
+	color: #d9534f;
+	}
+	
+	input[type=checkbox]:checked + label {
+	display: inline-block;
+	padding: 10px;
+	width: 140px;
+	}
+	
+	table {
+	border: 1px solid #efefef;	
+	}
+	
+	.PayPalCart {
+	width: 100%;
+	}
+	
+	.PayPalCart TH {
+	background-color: #efefef;
+	padding: 10px 0 10px 0;
+	text-align: center;
+	}
+	
+	.PayPalCart th.desc {
+	text-align: left;	
+	}
+	
+	.PayPalCart th.price {
+	padding-right: 10px;
+	text-align: right;	
+	}
+	
+	.PayPalCart td {
+	border-bottom: 1px solid #efefef;
+	padding: 10px;	
+	}
+	
+	.PayPalCartTotals {
+	background: #fff;
+	font-weight: bold;
+	border-bottom: 1px solid #efefef;
+	}
+	
+	.PayPalCart a {
+	text-decoration: none;
+	}
+	
+	.PayPalCart a:hover {
+	}
+	
+	#PayPalMiniCart {
+	padding: 5px;
+	text-align: center;
+	}
+	
+	li#minicart br {
+	display: none;
+	} 
+	
+	li#minicart span{ 
+	margin: 0 5px 0 5px;
+	}
+	</style>
+    
+</head>
+
+<body>
+<div class="navbar navbar-inverse navbar-static-top shop">
+	<div class="container">
+    	
+        <div class="navbar-header">
+        	<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            </button>
+        </div>
+        
+        <div class="navbar-collapse collapse">
+        	<ul class="nav navbar-nav navbar-right">
+            
+            <li class="dropdown shop-fullwidth">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <i class="fa fa-shopping-cart"></i> View cart<b class="caret"></b> </a>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <div class="shop-content">
+
+                            <div class="row-fluid">
+                           		<div class="col-lg-12 well">
+                                    <div id="thebasket">
+                                   
+                                    </div>
+                                    
+                                    <p class="text-center"><img src="dist/images/barcode.png" /></p>
+                                </div>
+                            </div>
+                      </div>
+                    </li>
+                  </ul>
+                </li>
+                <li id="minicart">0 items $0.00</li>
+			</ul>
+        </div>
+        
+    </div>
+</div>
+
+<div class="container">
+	<div class="row">
+    
+    	<div class="col-lg-3">
+        	<div class="panel panel-default">
+                <div class="panel-heading">
+                    <i class="fa fa-shopping-cart"></i>Your Basket
+                </div>
+                <div class="panel-body">
+                    <p id="minicart">0 items $0.00 </p>
+                    <p><i class="fa fa-check"></i> FREE shipping Australia wide</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-lg-9">
+        	<div class="row">
+                
+                <div class="col-lg-4 item-01 text-center">
+                    <img src="dist/images/C64-cassette.png" class="img-responsive img-thumbnail" />
+                    <h3>C64 Cassette player<br /><small class="price">$59.95</small></h3>
+                    <p>Plays all the latest games.</p>
+                    
+                    <p class="text-center">
+                        <input type='checkbox' name='item01' value='C64 Cassette player' id="item01" class="item01" />
+                        <label for="item01" class="add"><span>add to</span><span class="hidden">remove from</span> cart</label>
+        			</p>
+                </div>
+                
+                <div class="col-lg-4 item-02 text-center">
+                    <img src="dist/images/C64-keyboard.png" class="img-responsive img-thumbnail" /> 
+                    <h3>C64 PC Keyboard<br /><small class="price">$124.95</small></h3>
+                    <p>Latest in keyboard technology</p>
+                    
+                    <p class="text-center">
+                        <input type='checkbox' name='item02' value='C64 PC Keyboard' id="item02" class="item02" />
+                        <label for="item02" class="add"><span>add to</span><span class="hidden">remove from</span> cart</label>
+        			</p>
+                </div>
+                
+                <div class="col-lg-4 item-03 text-center">
+                    <img src="dist/images/C64-monitor.png" class="img-responsive img-thumbnail" />
+                    <h3>C64 Monitor<br /><small class="price">$264.95</small></h3>
+                    <p>View your graphics in 16bit</p>
+                    
+                    <p>
+                        <input type='checkbox' name='item03' value='C64 Monitor' id="item03" class="item03" />
+                        <label for="item03" class="add"><span>add to</span><span class="hidden">remove from</span> cart</label>
+        			</p>
+                </div>
+    
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+<script src="dist/jquery-1.11.3/jquery-1.11.3.min.js"></script>
+<script src="dist/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+<script src="dist/bootstrap-3.3.7/js/ie10-viewport-bug-workaround.js"></script>
+
+<script src="dist/jQueryCart/jQueryCart.js"></script>
+<script src="dist/jQueryCart/jPayPalCart.js"></script>
+<script src="dist/alertify/alertify.min.js"></script>
+    
+<script>
+$(document).ready(function () {
+
+	// Settings for PayPal and cart population of products added/removed
+	$("#thebasket").PayPalCart({ business: 'yourname@youremail.com', // this is where your email goes
+	
+		notifyURL: 'http://www.yournotifyURL.com/notify.php', // this is where your notification is located
+		virtual: false,             // set to true when you are selling virtual items such as downloads (false enables shipping option /true disbles shipping option)
+		quantityupdate: true,       // set to false if you want to disable quantity updates in the cart 
+		currency: 'AUS',            // set to your trading currency - see PayPal for valid options
+		currencysign: '&dollar;',   // set the currency symbol
+		minicartid: 'minicart, mincart2',     // element to show the number of items and net value
+		persitdays: 7               // set to -1 for cookie-less cart for single page of products, 
+									// 0 (default) persits for the session, 
+									// x (number of days) the basket will persits between visits
+	});
+		
+	// ITEM 01 - Add/Remove an item to the cart
+	$(".item01").click(function () {
+		
+		$(".item-01 span").toggleClass("hidden");
+		
+		if ($(this).attr("checked") == "checked") {
+			$("#thebasket").PayPalCart('add', $(this).val(), $(this).val().replace("_", " "), 1, 59.95);
+			alertify.success("<i class='fa fa-check'></i> C64 Cassette player added to your cart");
+			
+		} else {
+			$("#thebasket").PayPalCart('remove', $(this).val());
+			alertify.error("<i class='fa fa-times'></i> C64 Cassette player removed from your cart");
+			
+		}
+	});
+	
+	// ITEM 02 - Add/Remove an item to the cart
+	$(".item02").click(function () {
+		
+		$(".item-02 span").toggleClass("hidden");
+		
+		if ($(this).attr("checked") == "checked") {
+			$("#thebasket").PayPalCart('add', $(this).val(), $(this).val().replace("_", " "), 1, 124.95);
+			alertify.success("<i class='fa fa-check'></i> C64 PC Keyboard added to your cart");
+			
+		} else {
+			$("#thebasket").PayPalCart('remove', $(this).val());
+			alertify.error("<i class='fa fa-times'></i> C64 PC Keyboard removed from your cart");
+			
+		}
+	});
+	
+	// ITEM 03 - Add/Remove an item to the cart
+	$(".item03").click(function () {
+		
+		$(".item-03 span").toggleClass("hidden");
+		
+		if ($(this).attr("checked") == "checked") {
+			$("#thebasket").PayPalCart('add', $(this).val(), $(this).val().replace("_", " "), 1, 264.95);
+			alertify.success("<i class='fa fa-check'></i> C64 Monitor added to your cart");
+			
+		} else {
+			$("#thebasket").PayPalCart('remove', $(this).val());
+			alertify.error("<i class='fa fa-times'></i> C64 Monitor removed from your cart");
+			
+		}
+	});
+
+});
+</script>
