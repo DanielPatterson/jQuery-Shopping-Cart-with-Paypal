@@ -1,5 +1,5 @@
 # jQuery-Shopping-Cart-with-Paypal
-An example using jQueryCartand jPalcart to create a jQuery Shopping Cart with Paypal
+An example using jQueryCart and jPalcart to create a jQuery Shopping Cart with Paypal
 
 #### CSS Dependencies:
 - alertify.core.css
